@@ -38,11 +38,11 @@ public class DatabaseAccess {
         return instance;
     }
     public Document getItem (String user_id){
-        Document result = dbTable.getItem(new Primitive(credentialsProvider.getCachedIdentityId()), new Primitive(user_id));
+        Document result = dbTable_Complaint.getItem(new Primitive(credentialsProvider.getCachedIdentityId()), new Primitive(user_id));
         return result;
     }
     public List<Document> getAllItems() {
-        return dbTable.query(new Primitive("1234 5678 1234")).getAllResults();
+        return dbTable_Complaint.query(new Primitive("1")).getAllResults();
     }
 
 }
